@@ -1,32 +1,223 @@
-<h2>
-<img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-<img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-<img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50"/>
-  <img src="https://emojis.slackmojis.com/emojis/images/1643516154/21789/squirtle_cool.gif?1643516154" width="50">
-</h2>
+# 博士论文整体框架
+
+> **论文核心主题**：考虑多源物理约束的风电场级功率精细化预测方法研究
+>
+> 📖 **各部分研究现状调研**：[literature-review.md](./literature-review.md)
+>
+> 📝 **第二章详细写作报告**：[chapter2-report.md](./chapter2-report.md)
+>
+> **统一逻辑主线**：所有研究最终目标相同——提升**全站功率（场站级）**的预测精度。制约精度的核心瓶颈有三：**数据质量**、**场站电气层级约束（线损）**、**风场空间耦合（尾流效应）**。本论文从数据预处理出发，沿两条独立的物理约束主线分别建立预测模型，最终在场站级进行综合评估与对比。
+
+---
+
+## 论文结构总览
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  第一章  绪论                                                     │
+│  研究背景 · 文献综述 · 研究内容与框架                             │
+└─────────────────────────┬───────────────────────────────────────┘
+                          │ 问题提出：场站级功率预测精度不足
+                          ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  第二章  风电 SCADA 数据质量提升                                  │
+│  多层级功率结构分析 · 重复数据处理                                │
+│  基于热力图的异常数据识别 · 考虑空气密度的功率曲线数据清洗        │
+└──────────────┬──────────────────────────────┬───────────────────┘
+               │ 高质量单机/场站数据           │ 层级结构与线损规律
+               ▼                              ▼
+  ┌──────────────────────┐         ┌──────────────────────────┐
+  │  第三章              │         │  第四章                  │
+  │  电气层级约束路线    │         │  尾流空间约束路线        │
+  │  ──────────────────  │         │  ──────────────────────  │
+  │  风机-集电线路-场站  │         │  风场尾流建模与          │
+  │  分层功率预测框架    │         │  场站级功率预测          │
+  │                      │         │                          │
+  │  · 单机预测模型      │         │  · 尾流效应识别          │
+  │  · 线损修正          │         │  · 激光雷达来流建模      │
+  │  · Bottom-Up汇聚     │         │  · 尾流感知场站预测      │
+  └──────────┬───────────┘         └──────────┬───────────────┘
+             │ 场站级预测结果                   │ 场站级预测结果
+             └──────────────────┬──────────────┘
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  第五章  总结与展望                                               │
+│  两路方法综合对比 · 创新点凝练 · 研究展望                         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 各章详细内容
+
+### 第一章 绪论
+
+- **研究背景**：风电大规模并网，场站级功率预测精度对电力系统调度的重要性
+- **现有方法的三大局限**：
+  - 局限①：SCADA 数据质量差（含噪、异常、重复时间戳），导致功率曲线建模偏差
+  - 局限②：场站预测方法忽视内部电气层级约束（线损、集电线路汇聚误差）
+  - 局限③：场站预测方法忽视风机间尾流效应，未建模风场空间功率耦合特性
+- **研究内容**：在数据层提升输入质量（第二章），再分别沿电气层级约束（第三章）和尾流空间约束（第四章）两条路线改进场站功率预测
+
+---
+
+### 第二章 风电 SCADA 数据质量提升
+
+> **作用**：为后续两条预测路线提供高质量、可信赖的数据基础，同时建立层级功率认知
+
+**2.1 风电 SCADA 数据多层级功率结构**
+- 风机有功 → 集电线路有功 → 全站有功（三层级差异来源分析）
+- 线损、厂用电、计量位置差异的量化（峡阳A/B、峡沙、蕴阳等多场站）
+- 正值保留策略的合理性论证
+- 仓库：[Fan-Line-Site-Active-Power-Data-Comparison](https://github.com/19bdxx/Fan-Line-Site-Active-Power-Data-Comparison)
+
+**2.2 重复时间戳成因分析与处理**
+- 重复数据产生机制（SCADA 采集特性分析）
+- 去重策略选择与效果评估
+- 仓库：[Analysis-of-the-causes-of-duplicate-data-from-wind-turbines](https://github.com/19bdxx/Analysis-of-the-causes-of-duplicate-data-from-wind-turbines)
+
+**2.3 基于热力图的异常数据识别**
+- 以风速-功率热力图（2D 密度图）可视化功率曲线形态，直观定位异常区域
+- 异常模式归类：限电截顶、结冰失速、传感器漂移、停机拉尾等
+- 与传统阈值方法对比：热力图方法在多异常并存场景下的识别优势
+- 为后续精细清洗提供目标区域先验
+
+**2.4 考虑空气密度的功率曲线数据清洗**
+- 空气密度计算：ρ = f(T, P, RH)，消除季节性密度差异对功率曲线的偏移影响
+- KNN 局部异常检测：以风速和空气密度为双特征维度进行邻域筛选
+- 清洗前后功率曲线质量对比；跨季节/跨风电场鲁棒性验证
+- 仓库：[Wind-turbine-data-cleaning-considering-air-density](https://github.com/19bdxx/Wind-turbine-data-cleaning-considering-air-density)
+
+> **章节小结**：经过本章处理，SCADA 数据质量显著提升：§2.1 建立了层级功率认知，§2.2 消除了时间戳歧义，§2.3 明确了异常分布先验，§2.4 获得了修正空气密度效应的干净功率曲线数据，为第三、四章的建模提供统一的数据输入。
+
+---
+
+### 第三章 考虑电气层级约束的场站功率分层预测
+
+> **作用**：利用"单机→集电线路→全站"的电气拓扑关系与线损物理约束，以自底向上策略实现场站级精确预测
+
+**3.1 分层预测框架设计**
+- 层级结构：单机预测 → 集电线路聚合（含线损修正）→ 全站功率
+- 与全局预测（直接对场站功率建模）的对比设计
+- 自底向上（Bottom-Up）策略的物理合理性分析
+
+**3.2 单机功率预测模型**
+- 多模型对比：Ridge、LightGBM、XGBoost、MLP、LSTM
+- 特征工程：历史功率、风速、空气密度（来自第二章清洗结果）
+- 多步长预测实验（15/30/45/60/120/180 分钟）
+- 仓库：[turbine-line-layered-forecast](https://github.com/19bdxx/turbine-line-layered-forecast)
+
+**3.3 线损修正与集电线路聚合**
+- 线损查表模型：功率区间 → 线损率映射
+- 集电线路聚合策略（多场站验证）
+- 异常线损场景的鲁棒处理
+- 仓库：[Line-station-layered-forecast](https://github.com/19bdxx/Line-station-layered-forecast)
+
+**3.4 分层预测效果评估**
+- 全局预测 vs. 分层预测精度对比（RMSE / MAE / NRMSE）
+- 不同集电线路配置下的适用性分析
+
+---
+
+### 第四章 考虑尾流效应的风场级功率预测
+
+> **作用**：从风场整体出发，建模机组间尾流空间耦合对场站总功率的影响，构建尾流感知的场站级预测模型
+
+**4.1 风场尾流效应分析**
+- 尾流对下游风机来流风速与湍流强度的影响机制
+- 基于 SCADA 数据的风场尾流特征识别：
+  - 主风向统计与机组遮挡关系分析
+  - 不同风向下的场站总功率分布差异
+  - 尾流区域机组与自由流区机组的功率对比
+- 经典解析尾流模型（Jensen / Gaussian 等）的机理介绍
+
+**4.2 激光雷达来流风速支撑**
+- 多普勒风廓线雷达数据分析：扫描模式识别（VAD/PPI/RHI）、CNR 质量控制
+- 径向风速（RWS）反演与三维风场重建（VAD 方法）
+- 转子等效风速（REWS）提取，为来流风速建模提供更精准的输入
+- 机舱激光雷达数据与 SCADA 风速对比验证
+- 仓库：[Doppler-wind-profile-lidar-data](https://github.com/19bdxx/Doppler-wind-profile-lidar-data)、[LiDAR-for-wind-turbine-nacelles](https://github.com/19bdxx/LiDAR-for-wind-turbine-nacelles)
+
+**4.3 尾流感知的场站级功率预测**
+- **预测目标**：风电场总有功功率（全站级）
+- **尾流特征构建**：将风向、来流风速（含激光雷达修正）、各机组空间位置关系、上游机组运行状态编码为场站级输入特征
+- **模型设计**：数据驱动方法（LightGBM / 图神经网络 / 深度学习）结合尾流解析模型提供物理先验
+- **实验设计**：
+  - 按主风向分组评估（顺风向尾流显著 vs. 侧风向尾流弱）
+  - 与不考虑尾流的场站直接预测基线对比
+  - 与第三章分层预测结果的横向对比
+- 仓库：尾流建模（待建仓库）
+
+---
+
+### 第五章 总结与展望
+
+- 各章研究成果总结
+- 三大创新点凝练：
+  - **创新点①**：提出了以热力图定位异常先验、结合空气密度修正的 KNN 功率曲线数据清洗方法
+  - **创新点②**：设计了融合线损物理约束的"单机-集电线路-全站"分层预测框架
+  - **创新点③**：构建了以尾流效应为核心特征、结合激光雷达来流信息的场站级尾流感知功率预测模型
+- 两类方法（分层聚合 vs. 尾流感知）的适用场景分析
+- 研究局限与未来工作
+
+---
+
+## 创新点与研究逻辑总图
+
+```
+传统方法的局限                 本文的解决方案                   对应章节
+────────────────────────────────────────────────────────────────────
+数据含噪/异常/密度偏差  →  热力图异常识别 + 空气密度KNN清洗  →  第二章
+                              ↓（干净数据）
+                    ┌─────────────────────────┐
+忽视电气层级约束    →  分层框架 + 线损物理修正  →  第三章
+（线损/集电误差）       └─────────────────────────┘
+                    ┌─────────────────────────┐
+忽视尾流空间耦合    →  场站尾流建模 + 激光雷达  →  第四章
+（风机间功率耦合）      └─────────────────────────┘
+                              ↓（场站级预测结果）
+                         综合对比与结论（第五章）
+```
+
+---
+
+## 两条预测路线的对比定位
+
+| 维度 | 第三章：分层预测 | 第四章：尾流感知预测 |
+|------|-----------------|---------------------|
+| **建模粒度** | 单机 → 集电线路 → 全站 | 以整个风场为系统 |
+| **核心物理约束** | 电气层级 + 线损 | 风场空间尾流效应 |
+| **输入特征** | 单机历史功率、风速 | 来流风速、风向、机组位置、尾流遮挡关系 |
+| **数据需求** | 单机 SCADA + 场站集电拓扑 | 场站 SCADA + 激光雷达来流 |
+| **适用场景** | 需要精细化集电线路管理的场景 | 尾流效应显著（大型密集布置风场）的场景 |
+| **最终目标** | 全站功率预测 ✅ | 全站功率预测 ✅ |
+
+---
+
+## 各仓库与论文章节对应关系
+
+| 仓库 | 对应章节 | 状态 |
+|------|----------|------|
+| [Fan-Line-Site-Active-Power-Data-Comparison](https://github.com/19bdxx/Fan-Line-Site-Active-Power-Data-Comparison) | 第二章 §2.1 | ✅ 完成 |
+| [Analysis-of-the-causes-of-duplicate-data-from-wind-turbines](https://github.com/19bdxx/Analysis-of-the-causes-of-duplicate-data-from-wind-turbines) | 第二章 §2.2 | 🔄 进行中 |
+| 热力图异常识别（待整理/建仓库） | 第二章 §2.3 | 📋 待整理 |
+| [Wind-turbine-data-cleaning-considering-air-density](https://github.com/19bdxx/Wind-turbine-data-cleaning-considering-air-density) | 第二章 §2.4 | ✅ 核心完成，待补充实验 |
+| [turbine-line-layered-forecast](https://github.com/19bdxx/turbine-line-layered-forecast) | 第三章 §3.2 | ✅ 框架完成 |
+| [Line-station-layered-forecast](https://github.com/19bdxx/Line-station-layered-forecast) | 第三章 §3.3 | ✅ 框架完成 |
+| 尾流建模（待建仓库） | 第四章 §4.1 §4.3 | 📋 待启动 |
+| [Doppler-wind-profile-lidar-data](https://github.com/19bdxx/Doppler-wind-profile-lidar-data) | 第四章 §4.2 | 🔄 进行中 |
+| [LiDAR-for-wind-turbine-nacelles](https://github.com/19bdxx/LiDAR-for-wind-turbine-nacelles) | 第四章 §4.2 | 🔄 数据就绪 |
+| [XYB-wind-turbine-data-for-2025](https://github.com/19bdxx/XYB-wind-turbine-data-for-2025) | 第三/四章 实验数据 | ✅ 就绪 |
+| [HaiLu-Station-Fan-Data-January-November-](https://github.com/19bdxx/HaiLu-Station-Fan-Data-January-November-) | 第二/三章 实验数据 | ✅ 就绪 |
+| [wind-turbine-status-Qingzhou-6-](https://github.com/19bdxx/wind-turbine-status-Qingzhou-6-) | 第二章 附录/支撑 | ✅ 完成 |
+| [Knowledge](https://github.com/19bdxx/Knowledge) | 贯穿全文 | 🔄 持续更新 |
+
+---
+
+## 下一步工作重点
+
+1. **整理热力图异常识别工作**（第二章 §2.3）——建议建立独立仓库或整理到已有清洗仓库中
+2. **启动尾流建模仓库**（第四章 §4.1/4.3）——这是目前唯一完全空缺的核心章节
+3. **设计跨章对比实验**（第五章）——第三章分层预测结果 vs. 第四章尾流感知结果，在同一数据集上横向比较
+4. **统一基准数据集**——建议选定 1 个主要风电场贯穿第三、四章实验，确保对比公平
+5. **激光雷达数据与尾流模型衔接**——确认 REWS 计算结果能够作为第四章尾流特征的输入
